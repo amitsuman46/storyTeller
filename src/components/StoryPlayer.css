@@ -1,0 +1,323 @@
+.story-player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.player-controls {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.control-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-button.play {
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.control-button.play:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+}
+
+.control-button.pause {
+  background: linear-gradient(135deg, var(--warning) 0%, #d97706 100%);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.control-button.pause:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+}
+
+.control-button.stop {
+  background: linear-gradient(135deg, var(--error) 0%, #dc2626 100%);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.control-button.stop:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+}
+
+.control-button.reset {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.control-button.reset:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.control-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.voice-controls {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.voice-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.voice-control label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-value {
+  color: var(--primary-light);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.voice-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-light);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.voice-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+  transition: var(--transition);
+}
+
+.voice-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.6);
+}
+
+.voice-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+  transition: var(--transition);
+}
+
+.voice-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.6);
+}
+
+.voice-slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-slider:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+  background: var(--surface-light);
+}
+
+.voice-slider:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+  background: var(--surface-light);
+}
+
+.story-content {
+  flex: 1;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.story-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+.word {
+  display: inline;
+  transition: all 0.15s ease;
+  padding: 2px 0;
+  border-radius: 3px;
+}
+
+.word.highlighted {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  font-weight: 600;
+  padding: 4px 6px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+  transform: scale(1.05);
+  animation: pulse 0.3s ease;
+}
+
+.word.played {
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .story-player {
+    padding: 16px;
+  }
+
+  .player-controls {
+    padding: 20px;
+  }
+
+  .control-buttons {
+    gap: 8px;
+  }
+
+  .control-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .story-content {
+    padding: 28px 24px;
+  }
+
+  .story-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .word.highlighted {
+    padding: 3px 5px;
+  }
+
+  .voice-controls {
+    margin-top: 20px;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .voice-control {
+    min-width: 150px;
+  }
+
+  .voice-control label {
+    font-size: 0.9rem;
+  }
+
+  .control-value {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-player {
+    padding: 12px;
+  }
+
+  .player-controls {
+    padding: 16px;
+  }
+
+  .control-button {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .story-content {
+    padding: 20px 16px;
+  }
+
+  .story-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .voice-controls {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .voice-control {
+    min-width: 100%;
+  }
+
+  .voice-control label {
+    font-size: 0.85rem;
+  }
+
+  .control-value {
+    font-size: 0.9rem;
+  }
+}
+

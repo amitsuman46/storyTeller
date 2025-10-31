@@ -1,0 +1,62 @@
+🎧 AUDIOBOOK STORY TELLER - QUICK START
+========================================
+
+STEP 1: CREATE .env FILE
+-------------------------
+Create a file named ".env" in the project root with these contents:
+
+VITE_SECRET_KEY=mySecretKey123
+VITE_GEMINI_API_KEY=your-gemini-api-key-here
+
+Replace "your-gemini-api-key-here" with your actual Gemini API key.
+Get your API key from: https://makersuite.google.com/app/apikey
+
+
+STEP 2: INSTALL DEPENDENCIES
+-----------------------------
+Open terminal in this folder and run:
+
+npm install
+
+
+STEP 3: START THE APP
+----------------------
+Run:
+
+npm run dev
+
+Then open: http://localhost:3000
+
+
+STEP 4: LOGIN
+-------------
+Enter the secret key you set in .env file (default: mySecretKey123)
+
+
+STEP 5: ENJOY!
+--------------
+- Choose a genre
+- Generate a story
+- Click Play to hear it with word highlighting
+
+
+FOR DEPLOYMENT TO RENDER:
+--------------------------
+See README.md for complete deployment instructions.
+
+
+SHARE WITH FRIENDS:
+-------------------
+- Deploy to Render (free)
+- Give them the URL and your secret key
+- They can access instantly!
+
+
+NEED HELP?
+----------
+Check SETUP.md for detailed instructions
+Check README.md for full documentation
+
+
+Enjoy your AI-powered storytelling! 📚✨
+

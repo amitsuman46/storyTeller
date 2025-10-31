@@ -1,0 +1,90 @@
+⚠️  IMPORTANT: CREATE YOUR .env FILE
+=====================================
+
+Before running the app, you MUST create a .env file!
+
+STEP-BY-STEP INSTRUCTIONS:
+--------------------------
+
+1. Create a new file in the project root folder (where package.json is)
+2. Name it exactly: .env
+3. Add these two lines:
+
+VITE_SECRET_KEY=mySecretKey123
+VITE_GEMINI_API_KEY=your-actual-gemini-api-key-here
+
+
+GETTING YOUR GEMINI API KEY:
+----------------------------
+
+1. Visit: https://makersuite.google.com/app/apikey
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the generated key (starts with "AIza...")
+5. Paste it in the .env file
+
+
+EXAMPLE .env FILE:
+------------------
+
+VITE_SECRET_KEY=myPassword2024
+VITE_GEMINI_API_KEY=AIzaSyAbc123xyz...your-actual-key
+
+
+IMPORTANT NOTES:
+---------------
+
+✅ The .env file should be in the ROOT directory (same level as package.json)
+✅ No spaces around the = sign
+✅ No quotes needed around the values
+✅ Keep this file SECRET - never share it or commit it to Git
+✅ You can change VITE_SECRET_KEY to any password you want
+✅ The secret key is what you'll use to login to the app
+
+
+SHARING WITH FRIENDS:
+--------------------
+
+When you deploy to Render, you'll set these environment variables there.
+Then you only need to share:
+- The Render URL
+- Your VITE_SECRET_KEY (the password)
+
+Your friends don't need the Gemini API key - only you do!
+
+
+TROUBLESHOOTING:
+---------------
+
+❌ "Secret key not configured" error?
+   → Make sure .env file exists and has VITE_SECRET_KEY
+
+❌ "Gemini API key is not configured" error?
+   → Make sure .env file has VITE_GEMINI_API_KEY
+
+❌ "Invalid API key" error?
+   → Double-check your Gemini API key is correct
+
+❌ App still not working?
+   → Restart the development server (npm run dev)
+
+
+VERIFICATION:
+------------
+
+To verify your .env file is set up correctly:
+
+1. Make sure the file is named exactly ".env" (with the dot)
+2. It should be in the root folder, not in src/
+3. It should have both VITE_SECRET_KEY and VITE_GEMINI_API_KEY
+4. Restart your dev server after creating/editing .env
+
+
+After creating the .env file, run:
+
+npm install
+npm run dev
+
+
+Good luck! 🚀
+
