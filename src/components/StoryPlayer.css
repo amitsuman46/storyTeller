@@ -87,6 +87,107 @@
   transform: translateY(0);
 }
 
+.control-button.info {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  box-shadow: 0 4px 12px rgba(100, 116, 139, 0.4);
+}
+
+.control-button.info:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.6);
+}
+
+.voice-info {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.voice-info h3 {
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.hindi-voices {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.hindi-voices strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+}
+
+.hindi-voices ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.hindi-voices li {
+  padding: 6px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.no-hindi {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0 0 0;
+}
+
+.no-hindi strong {
+  color: #fef3c7;
+}
+
+.voice-info details {
+  margin-top: 12px;
+}
+
+.voice-info summary {
+  cursor: pointer;
+  padding: 8px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  user-select: none;
+}
+
+.voice-info summary:hover {
+  background: rgba(51, 65, 85, 0.8);
+}
+
+.all-voices-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.all-voices-list li {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.voice-lang {
+  color: var(--text-primary);
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
 .voice-controls {
   margin-top: 24px;
   padding-top: 24px;
